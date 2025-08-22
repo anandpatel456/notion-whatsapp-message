@@ -31,13 +31,24 @@ app.get("/", (req, res) => {
 });
 
 const client = new Client({
-	authStrategy: new LocalAuth({
-		clientId: "client-one", // Unique identifier for the client
-	}),
-	puppeteer: {
-		headless: false,
-	},
+  authStrategy: new LocalAuth({
+    clientId: "client-one",
+  }),
+  puppeteer: {
+    headless: true,
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-accelerated-2d-canvas",
+      "--no-first-run",
+      "--no-zygote",
+      "--single-process", // <- may be needed
+      "--disable-gpu"
+    ],
+  },
 });
+
 
 const allSession = {};
 client.on("qr", (qr) => {
