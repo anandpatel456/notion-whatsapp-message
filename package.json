@@ -1,0 +1,26 @@
+{
+  "name": "webjs",
+  "version": "1.0.0",
+  "description": "whatapp bot",
+  "keywords": [
+    "whatsappweb.js"
+  ],
+  "license": "ISC",
+  "author": "Rishabh Kushwah",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@notionhq/client": "^3.1.3",
+    "axios": "^1.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.30.0"
+  }
+}
